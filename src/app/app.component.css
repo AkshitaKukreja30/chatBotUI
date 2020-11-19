@@ -38,7 +38,9 @@
     cursor: pointer;
     font-size: 25px;
 }
-
+.modal-backdrop {
+  z-index: -1;
+}
 .modal-content { 
     background-color: rgba(0,0,0,.0) !important; 
     border: none !important;
@@ -69,7 +71,8 @@
     box-shadow: 0 0 0 0 rgba(52,216,249, 0.7);
     border-radius: 50%;
     background-color: #0D9EBB;
-    background-image: url(..//images/Chat.png);
+    /*background-image: url(..//images/Chat.png);*/
+    background-image: url(https://i.ibb.co/SB7W21j/Chat.png);
     background-size:cover;
     background-repeat: no-repeat;
     cursor: pointer;

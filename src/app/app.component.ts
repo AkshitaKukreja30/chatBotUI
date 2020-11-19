@@ -1,6 +1,7 @@
 import { Component ,OnInit, Renderer2, ElementRef,ViewChild} from '@angular/core';
 import { FormGroup,FormsModule,FormBuilder } from '@angular/forms';
 import {Chatbox} from './chatbox';
+
 //import { HttpParams, HttpClientModule } from '@angular/common/http';
 import { HttpParams,HttpClientModule, HttpClient, HttpHeaders } from '@angular/common/http';
 import { map } from 'rxjs/operators';
@@ -9,8 +10,15 @@ import { ChatService } from './chatService';
 // import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
 declare var jquery:any;
 declare var $:any;
+
+console.log('in file');
+
+
+
+
+
 @Component({
-  selector: 'app-root',
+  selector: 'chatbot-comp',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css',
               "../../node_modules/font-awesome/css/font-awesome.css"
@@ -27,16 +35,24 @@ export class AppComponent implements OnInit {
 
   constructor(private chatService: ChatService, private formBuilder:FormBuilder,private renderer:Renderer2){
     this.sendButton=true
+    console.log('in constructor');
+    console.log(document.getElementById('chatbot'));
+    console.log(document.getElementById('ChatBot'));
   }
   ngOnInit(){
-    $("#close").hover(
-      function () {
-        $("#chatdone").show();
-      }, 
-      function () {
-        $("#chatdone").hide();
-      }
-    );
+    console.log('in init');
+   
+    document.getElementById("chatbot").addEventListener ("click", this.onChatIconClick, false);
+    console.log(document.getElementById('chatbot'));
+    console.log(document.getElementById('ChatBot'));
+    // $("#close").hover(
+    //   function () {
+    //     $("#chatdone").show();
+    //   }, 
+    //   function () {
+    //     $("#chatdone").hide();
+    //   }
+    // );
   }
   title = 'ChatBotApp';
   Empty(){
@@ -50,7 +66,14 @@ export class AppComponent implements OnInit {
 
   chatReply$;
 
+
+ onChatIconClick(){
+    console.log('chal gaya');
+    $('#ChatBot').modal("show");
+    }
+  
   onSubmit(){
+    console.log("inside js");
     this.sendButton=false
     if(this.chatModal.inputQuery==""){
       return false
@@ -144,3 +167,5 @@ export class AppComponent implements OnInit {
 
 
 }
+
+

@@ -4,10 +4,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build:elements": "ng build --prod --output-hashing none && node build-script.js"
   },
   "private": true,
   "dependencies": {
@@ -15,11 +16,12 @@
     "@angular/common": "~8.2.14",
     "@angular/compiler": "~8.2.14",
     "@angular/core": "~8.2.14",
-    "@angular/elements": "^10.1.6",
+    "@angular/elements": "^10.2.3",
     "@angular/forms": "~8.2.14",
     "@angular/platform-browser": "~8.2.14",
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
+    "@webcomponents/custom-elements": "^1.4.3",
     "rxjs": "~6.4.0",
     "rxjs-compat": "^6.6.3",
     "tslib": "^1.10.0",
@@ -34,7 +36,9 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
     "codelyzer": "^5.0.0",
+    "concat": "^1.0.3",
     "font-awesome": "^4.7.0",
+    "fs-extra": "^9.0.1",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.1.0",

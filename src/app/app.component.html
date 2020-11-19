@@ -1,15 +1,20 @@
-<!-- <div style="text-align:center">
-  <h1>
-   {{ title }}!
-  </h1>
-</div> --> 
+<body>
+<div style="text-align:center">
+  <p class="text-primary">abc</p>
+  <!--  some text
+  </h1> -->
+</div> 
 <div class="container">
-  <button class="Chat-icon" id="chatbot" data-toggle="modal" data-target="#ChatBot" data-backdrop="static" data-keyboard="false"></button>
+<!--   <button class="Chat-icon" id="chatbot" data-toggle="modal" data-target="#ChatBot" data-backdrop="static" data-keyboard="false"></button> -->
+  <button class="Chat-icon" id="chatbot"></button>
+  <p>2</p>
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="ChatBot" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document" style="position: absolute;right:0;width:27%;margin-right:2%;">
+<!-- <div class="modal fade" id="ChatBot" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"> -->
+<div class="modal" id="ChatBot" role="dialog">
+  <!-- <div class="modal-dialog" role="document" style="position: absolute;right:0;width:27%;margin-right:2%;"> -->
+    <div class="modal-dialog" style="position: absolute;right:0;width:27%;margin-right:2%;">
     <section class="modal-content"> 
       <div class="card" style="border:none">
           <div id="chat_header" class="card-title" >
@@ -55,7 +60,7 @@
     </section>
   </div>
 </div>
-  
+</body>
 
 
 <router-outlet></router-outlet>
