@@ -1,18 +1,12 @@
 <body>
-<div style="text-align:center">
-  <p class="text-primary">abc</p>
-  <!--  some text
-  </h1> -->
-</div> 
 <div class="container">
 <!--   <button class="Chat-icon" id="chatbot" data-toggle="modal" data-target="#ChatBot" data-backdrop="static" data-keyboard="false"></button> -->
   <button class="Chat-icon" id="chatbot"></button>
-  <p>2</p>
 </div>
 
 <!-- Modal -->
 <!-- <div class="modal fade" id="ChatBot" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"> -->
-<div class="modal" id="ChatBot" role="dialog">
+<div class="modal" id="ChatBot" role="dialog" data-backdrop="static">
   <!-- <div class="modal-dialog" role="document" style="position: absolute;right:0;width:27%;margin-right:2%;"> -->
     <div class="modal-dialog" style="position: absolute;right:0;width:27%;margin-right:2%;">
     <section class="modal-content"> 
@@ -33,7 +27,7 @@
           </div>
           <hr/>
           <div id="chat_footer">
-            <button id="linkAsButton" (click)="chatlogs.innerHTML = ''" style="position: absolute;right: 0; bottom:8%">
+            <button id="linkAsButton" (click)="chatlogs.innerHTML = ''" style="position: absolute;right: 0; bottom:12%">
             Clear Chat      
             </button>
             <div class="input-bar">
@@ -42,12 +36,12 @@
                       <div class="input-group">
                         <input required placeholder="Enter message here" (ngModelChange)="Empty()" type="text" class="form-control width100 rounded" name="chatModal.inputQuery" [(ngModel)]="chatModal.inputQuery">
                         <span *ngIf="sendButton==true" class="input-group-btn">                          
-                            <button type="submit" class="btn btn-danger btn-block rounded">
+                            <button type="submit" class="btn btn-danger btn-block rounded" style="height: 38px">
                                 <i class="fa fa-paper-plane" aria-hidden="true"></i>
                             </button>
                         </span>
-                        <span *ngIf="sendButton==false" class="input-group-btn">                          
-                            <button type="submit" class="btn btn-danger btn-block rounded" disabled>
+                        <span *ngIf="sendButton==false" class="input-group-btn">                         
+                            <button type="submit" class="btn btn-danger btn-block rounded" disabled style="height: 38px">
                                 <i class="fa fa-paper-plane" aria-hidden="true"></i>
                             </button>
                         </span>

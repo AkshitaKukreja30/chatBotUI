@@ -59,7 +59,8 @@
     border: none;
     box-shadow: 0 0 0 0 rgba(52,216,249, 0.7);
     border-radius: 100%;
-    background-image: url(..//images/cyg.png);
+    /*background-image: url(..//images/cyg.png);*/
+    background-image: url("https://i.ibb.co/MSmVFfX/cyg.png");
     background-size:100% 100%;
     background-repeat: no-repeat;
 }
